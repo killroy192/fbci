@@ -15,5 +15,5 @@ serverHandler
     .use('/', standartRouter);
 
 export {
-    serverHandler
+    serverHandler,
 };
