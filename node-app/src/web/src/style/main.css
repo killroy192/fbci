@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: none;
+}
+
+.custom-layout {
+    min-height: 100vh;
+}
+
+.logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255,255,255,.2);  
+    margin: 16px 24px 16px 0;
+    float: left;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.custom-header {
+    padding: 0;
+}
+
+.spb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-block {
+    margin-top: 30px; 
+}

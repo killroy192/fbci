@@ -25,7 +25,7 @@ const plugins = [
     }),
 
     new HtmlPlugin({
-        template: path.join(__dirname, '../src/public/template.html'),
+        template: path.join(__dirname, '../src/template/index.html'),
         filename: 'index.html',
     }),
     new ScriptExtHtmlWebpackPlugin({
@@ -74,7 +74,7 @@ if (uglify) {
                 negate_iife: true,
             },
             sourceMap: false,
-        }),
+        })
     );
 }
 
