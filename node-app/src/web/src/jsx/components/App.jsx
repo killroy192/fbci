@@ -1,9 +1,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Breadcrumb } from 'antd';
-import { HorizontalMenu } from "./menu";
-const { Header, Content, Footer } = Layout;
+import { Layout, Row, Col } from 'antd';
+import { HorizontalMenu } from './menu';
+import { Footer } from './footer';
+
+import 'styles/main.css';
+
+const { Header, Content } = Layout;
 
 
 export default class App extends React.Component {
@@ -38,9 +42,7 @@ export default class App extends React.Component {
                 <Content className="container content-block">
                     <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }} className="container">
-                    Ant Design ©2016 Created by Ant UED
-                </Footer>
+                <Footer />
             </Layout>
         );
     }

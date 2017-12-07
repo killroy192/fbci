@@ -94,6 +94,7 @@ module.exports = {
     resolve: {
         modules: [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../node_modules/')],
         alias: {
+            styles: path.resolve(__dirname, '../src/style/'),
         },
         extensions: ['.jsx', '.js'],
     },

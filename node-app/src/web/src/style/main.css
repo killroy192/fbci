@@ -33,3 +33,7 @@ html, body {
 .content-block {
     margin-top: 30px; 
 }
+
+.tc {
+    text-align: center;
+}
