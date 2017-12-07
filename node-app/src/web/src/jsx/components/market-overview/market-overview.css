@@ -1,0 +1,41 @@
+.market-overview {
+
+}
+
+.market-overview .box-tittle {
+    padding-bottom: 5px;
+    border-bottom: 5px solid #e5e4e4;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.box-tittle .tittle-left {
+    font-size: 1.250em;
+    line-height: 1.875em;
+}
+
+.market-overview .market-status-information {
+    margin-top: 10px;
+}
+
+.charts-say-link:hover {
+    background: #F8F8F8;
+}
+
+.charts-say-link:hover {
+    background: #F8F8F8;
+}
+
+.consensus-box {
+
+}
+
+.consensus-image {
+
+}
+
+.charts-say-container {
+
+}

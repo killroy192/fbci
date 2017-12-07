@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { Layout, Row, Col } from 'antd';
 import { HorizontalMenu } from './menu';
 import { Footer } from './footer';
-
-import 'styles/main.css';
+import { MarketOverView } from './market-overview/';
+import 'styles/global.css';
 
 const { Header, Content } = Layout;
 
@@ -33,13 +33,13 @@ export default class App extends React.Component {
                         <HorizontalMenu />
                     </div>
                 </Header>
-                <Content className="container content-block">
+                <Content className="container content">
+                    <MarketOverView />
+                </Content>
+                <Content className="container content">
                     <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
                 </Content>
-                <Content className="container content-block">
-                    <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
-                </Content>
-                <Content className="container content-block">
+                <Content className="container content">
                     <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
                 </Content>
                 <Footer />
