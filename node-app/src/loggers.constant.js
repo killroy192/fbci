@@ -1,7 +1,7 @@
-const globalLogs = require('debug')('globalLogs');
-const appLogs = require('debug')('appLogs');
-const routerLogs = require('debug')('routerLogs');
-const coreLogs = require('debug')('coreLogs');
+const globalLogs = require('debug')('c::globalLogs');
+const appLogs = require('debug')('c::appLogs');
+const routerLogs = require('debug')('c::routerLogs');
+const coreLogs = require('debug')('c::coreLogs');
 
 const lavel = process.env.LOGGLEVEL || 4;
 
