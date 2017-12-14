@@ -8,6 +8,10 @@ module.exports = {
     "rules": {
         "indent": ["error", 4],
         "react/jsx-indent": ["error", 4],
-        "import/prefer-default-export": [0]
+        "import/prefer-default-export": [0],
+        "array-callback-return": "off",
+        "no-param-reassign": "off",
+        "no-return-assign": "off",
+        "arrow-body-style": "off",
     }
 };

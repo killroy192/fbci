@@ -1,11 +1,14 @@
-const { Router, Request, Response } = require('express');
 
-const standartRouter = Router();
+const express = require('express');
+const loggers = require('../loggers.constant');
+const getData = require('../core');
 
-standartRouter.get('/users', (req, res) => {
-    res.send(JSON.stringify(userData));
+const router = express.Router();
+
+// define the home page route
+router.get('/', (req, res) => {
+    loggers.routerLogs(`main-router::${req.method} ${req.url}`);
+    getData().then(data => res.json(data));
 });
 
-export {
-    standartRouter
-};
+module.exports = router;
