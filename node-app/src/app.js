@@ -3,12 +3,12 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const serveFavicon = require('serve-favicon');
 const path = require('path');
-const loggers = require('./loggers.constant');
+const loggers = require('./loggers');
 const standartRouter = require('./routers/main');
 
 const serverHandler = express();
 
-loggers.appLogs('... running');
+loggers.appLogs(' ...running');
 
 serverHandler
     .use(bodyParser.json())

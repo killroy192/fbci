@@ -1,17 +1,14 @@
-const globalLogs = require('debug')('c::globalLogs');
-const appLogs = require('debug')('c::appLogs');
-const routerLogs = require('debug')('c::routerLogs');
-const coreLogs = require('debug')('c::coreLogs');
+const { empty } = require('./helpers');
+const globalLogs = require('debug')('www::');
+const appLogs = require('debug')('app::');
+const routerLogs = require('debug')('routers::');
+const coreLogs = require('debug')('core::');
 
-const lavel = process.env.LOGGLEVEL || 4;
+const level = process.env.LOGGLEVEL || 4;
 
 let Logger;
 
-const empty = () => {
-
-};
-
-switch (lavel) {
+switch (Number(level)) {
 case 1:
     Logger = {
         globalLogs,

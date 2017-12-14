@@ -2,148 +2,148 @@
     {
         "id": "bitcoin",
         "symbol": "BTC",
-        "markTech": "100",
-        "markPC": "160.67",
+        "markTech": "77",
+        "markPC": "161",
         "index": 1
     },
     {
         "id": "ethereum",
         "symbol": "ETC",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "86",
+        "markPC": "124",
         "index": 2
     },
     {
         "id": "ripple",
         "symbol": "XRP",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "40",
+        "markPC": "115",
         "index": 3
     },
     {
         "id": "litecoin",
         "symbol": "LTC",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "85",
+        "markPC": "122",
         "index": 4
     },
     {
         "id": "iota",
         "symbol": "MIOTA",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "72",
+        "markPC": "115",
         "index": 5
     },
     {
         "id": "dash",
         "symbol": "DASH",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "81",
+        "markPC": "101",
         "index": 6
     },
     {
         "id": "monero",
         "symbol": "XMR",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "78",
+        "markPC": "109",
         "index": 7
     },
     {
         "id": "eos",
         "symbol": "EOS",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "77",
+        "markPC": "98",
         "index": 8
     },
     {
         "id": "neo",
         "symbol": "NEO",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "87",
+        "markPC": "105",
         "index": 9
     },
     {
         "id": "waves",
         "symbol": "WAVES",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "88",
+        "markPC": "96",
         "index": 10
     },
     {
         "id": "zcash",
         "symbol": "ZEC",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "79",
+        "markPC": "93",
         "index": 11
     },
     {
         "id": "lisk",
         "symbol": "LSK",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "75",
+        "markPC": "92",
         "index": 12
     },
     {
         "id": "bitshares",
         "symbol": "BTS",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "70",
+        "markPC": "84",
         "index": 13
     },
     {
         "id": "decred",
         "symbol": "DCR",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "87",
+        "markPC": "79",
         "index": 14
     },
     {
         "id": "factom",
         "symbol": "FTC",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "80",
+        "markPC": "84",
         "index": 15
     },
     {
         "id": "zcoin",
         "symbol": "XZC",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "80",
+        "markPC": "76",
         "index": 16
     },
     {
         "id": "0x",
         "symbol": "ZRX",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "84",
+        "markPC": "76",
         "index": 17
     },
     {
         "id": "storj",
         "symbol": "STORJ",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "69",
+        "markPC": "80",
         "index": 18
     },
     {
         "id": "qtum",
         "symbol": "QTUM",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "75",
+        "markPC": "86",
         "index": 19
     },
     {
         "id": "Aragon",
         "symbol": "ANT",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "65",
+        "markPC": "48",
         "index": 20
     },
     {
         "id": "triggers",
         "symbol": "TRIG",
-        "markTech": "100",
-        "markPC": "100",
+        "markTech": "90",
+        "markPC": "30",
         "index": 21
     }
 ]
