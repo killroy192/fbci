@@ -1,4 +1,5 @@
 const loggers = require('../loggers');
+const { FLOATING_BTC, FLOATING_USD } = require('./constants');
 
 function simpleMixin(target, toMix, conditions) {
     return target
@@ -30,9 +31,27 @@ function multiplication(propName) {
     };
 }
 
+function formatFloat(digits) {
+    return function (num) {
+        if (!isNaN(num) && (/\./).test(String(num))) {
+            const powered = Math.pow(10, digits);
+            const tmp = Math.round(num * powered);
+
+            return tmp / powered;
+        }
+        return num;
+    };
+}
+
+const formatUSDPrice = formatFloat(FLOATING_USD);
+const formatBTCPrice = formatFloat(FLOATING_BTC);
+
 module.exports = {
     mixin,
     partOf,
     multiplication,
+    formatFloat,
+    formatUSDPrice,
+    formatBTCPrice,
 };
 

@@ -12,6 +12,7 @@ module.exports = function getData() {
         .then(res => res.json())
         .then(calcPortfolio)
         .catch((error) => {
-            loggers.coreLogs(`index->There has been a problem with your fetch operation: ${error.message}`);
+            // loggers.coreLogs(`index->There has been a problem with your fetch operation: ${error.message}`);
+            console.log(`index->There has been a problem with your fetch operation: ${error.message}`);
         });
 };
