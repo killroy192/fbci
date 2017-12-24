@@ -1,5 +1,5 @@
-const loggers = require('../loggers');
-const { FLOATING_BTC, FLOATING_USD } = require('./constants');
+const loggers = require('loggers');
+const { FLOATING_BTC, FLOATING_USD } = require('constants/core.constants');
 
 function simpleMixin(target, toMix, conditions) {
     return target

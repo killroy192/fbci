@@ -23,6 +23,7 @@
     "express": "^4.16.2",
     "express-validator": "^4.3.0",
     "mocha": "^2.5.3",
+    "mongoose": "^4.13.7",
     "node-fetch": "^1.7.3",
     "serve-favicon": "^2.4.5",
     "shelljs": "^0.7.7"

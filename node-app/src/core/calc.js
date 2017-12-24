@@ -1,13 +1,13 @@
-const marksData = require('../input/EM.json');
+const marksData = require('input/EM.json');
 
-const loggers = require('../loggers');
+const loggers = require('loggers');
 const {
     mixin,
     partOf,
     multiplication,
     formatUSDPrice,
     formatBTCPrice,
-    } = require('./helpers');
+    } = require('core/helpers');
 
 const {
     API_ITEM_KEYS,
@@ -21,7 +21,7 @@ const {
     BASE_INVESTMENT,
     BTC,
     MINIMAL_BYE_IN_BTC,
-    } = require('./constants');
+    } = require('constants/core.constants');
 
 const multiplicationMarketCap = multiplication(API_ITEM_KEYS.MARKET_CAP_USD);
 const multiplicationVolume = multiplication(API_ITEM_KEYS.VOLUME_USD_24);
@@ -107,7 +107,7 @@ function getValueToInvest(cryptoMarks, data) {
 }
 
 function recapResults(prifileData) {
-    const prifileFullData = prifileData.slice()
+    const prifileFullData = prifileData.slice();
     prifileFullData.push({
         [SUM_TO_INVEST_USD]: prifileData.reduce(multiplicationPricesToInvestUSD, 0),
         [SUM_TO_INVEST_BTC]: prifileData.reduce(multiplicationPricesToInvestBTC, 0),

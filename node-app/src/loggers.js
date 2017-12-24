@@ -1,8 +1,9 @@
-const { empty } = require('./helpers');
-const globalLogs = require('debug')('www::');
-const appLogs = require('debug')('app::');
-const routerLogs = require('debug')('routers::');
-const coreLogs = require('debug')('core::');
+const { empty } = require('helpers');
+const global = require('debug')('www::');
+const app = require('debug')('app::');
+const router = require('debug')('routers::');
+const core = require('debug')('core::');
+const mongo = require('debug')('mongo::');
 
 const level = process.env.LOGGLEVEL || 4;
 
@@ -11,35 +12,39 @@ let Logger;
 switch (Number(level)) {
 case 1:
     Logger = {
-        globalLogs,
-        appLogs: empty,
-        routerLogs: empty,
-        coreLogs: empty,
+        global,
+        app: empty,
+        router: empty,
+        core: empty,
+        mongo: empty,
     };
     break;
 case 2:
     Logger = {
-        globalLogs,
-        appLogs,
-        routerLogs: empty,
-        coreLogs: empty,
+        global,
+        app,
+        router: empty,
+        core: empty,
+        mongo,
     };
     break;
 case 3:
     Logger = {
-        globalLogs,
-        appLogs,
-        routerLogs,
-        coreLogs: empty,
+        global,
+        app,
+        router,
+        core: empty,
+        mongo,
     };
     break;
 
 default:
     Logger = {
-        globalLogs,
-        appLogs,
-        routerLogs,
-        coreLogs,
+        global,
+        app,
+        router,
+        core,
+        mongo,
     };
     break;
 }
