@@ -7,7 +7,7 @@ const loggers = require('loggers');
 const mainRouter = require('routers/main');
 
 const serverHandler = express();
-loggers.app(' ...running');
+loggers.log(' ...running');
 
 serverHandler
     .use(bodyParser.json())

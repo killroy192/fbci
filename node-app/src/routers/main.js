@@ -7,7 +7,7 @@ const router = express.Router();
 
 // define the home page route
 router.get('/api', (req, res) => {
-    loggers.router(`main-router->${req.method} ${req.url}`);
+    loggers.log(`main-router->${req.method} ${req.url}`);
     getData().then(data => res.json(data));
 });
 

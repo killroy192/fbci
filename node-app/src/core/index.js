@@ -5,7 +5,7 @@ const constants = require('constants/core.constants');
 
 const address = `${constants.API}/?limit=${constants.LIMIT}`;
 
-loggers.core(`index->fetching data from ${address}`);
+loggers.log(`index->fetching data from ${address}`);
 
 module.exports = function getData() {
     return fetch(address)
@@ -13,6 +13,6 @@ module.exports = function getData() {
         .then(calcPortfolio)
         .catch((error) => {
             // loggers.core(`index->There has been a problem with your fetch operation: ${error.message}`);
-            loggers.core(`index->There has been a problem with your fetch operation: ${error.message}`);
+            loggers.error(`index->There has been a problem with your fetch operation: ${error.message}`);
         });
 };

@@ -1,50 +1,38 @@
 const { empty } = require('helpers');
-const global = require('debug')('www::');
-const app = require('debug')('app::');
-const router = require('debug')('routers::');
-const core = require('debug')('core::');
-const mongo = require('debug')('mongo::');
+const { dbg_colors } = require('constants/global.constants');
+const log = require('debug')('app:: log::');
+const warn = require('debug')('app:: warn::');
+const error = require('debug')('app:: error::');
 
-const level = process.env.LOGGLEVEL || 4;
+log.color = dbg_colors.LOG;
+warn.color = dbg_colors.WARN;
+error.color = dbg_colors.ERROR;
+
+const level = process.env.LOG_LEVEL || 3;
 
 let Logger;
 
 switch (Number(level)) {
 case 1:
     Logger = {
-        global,
-        app: empty,
-        router: empty,
-        core: empty,
-        mongo: empty,
+        error,
+        warn: empty,
+        log: empty,
     };
     break;
 case 2:
     Logger = {
-        global,
-        app,
-        router: empty,
-        core: empty,
-        mongo,
-    };
-    break;
-case 3:
-    Logger = {
-        global,
-        app,
-        router,
-        core: empty,
-        mongo,
+        error,
+        warn,
+        log: empty,
     };
     break;
 
 default:
     Logger = {
-        global,
-        app,
-        router,
-        core,
-        mongo,
+        error,
+        warn,
+        log,
     };
     break;
 }
