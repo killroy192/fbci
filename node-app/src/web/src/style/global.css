@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: none;
+}
+
+.custom-layout {
+    min-height: 100vh;
+}
+
+.logo {
+    width: 132px;
+    height: 31px;
+    background-image: url('../img/logo.png');
+    margin: 16px 24px 16px 0;
+    float: left;
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.custom-header {
+    padding: 0;
+}
+
+.spb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+    margin-top: 30px; 
+}
+
+.content-block {
+    background: #fff;
+    padding: 24px;
+}
+
+.tc {
+    text-align: center;
+}
