@@ -14,6 +14,7 @@ module.exports = {
         "no-return-assign": "off",
         "arrow-body-style": "off",
         "import/no-unresolved": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "no-underscore-dangle": "off",
     }
 };

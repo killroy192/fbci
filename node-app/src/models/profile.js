@@ -9,9 +9,9 @@ const Images = new Schema({
     kind: {
         type: String,
         enum: ['thumbnail', 'detail'],
-        required: true
+        required: true,
     },
-    url: { type: String, required: true }
+    url: { type: String, required: true },
 });
 
 const Article = new Schema({
@@ -19,11 +19,11 @@ const Article = new Schema({
     author: { type: String, required: true },
     description: { type: String, required: true },
     images: [Images],
-    modified: { type: Date, default: Date.now }
+    modified: { type: Date, default: Date.now },
 });
 
 // validation
-Article.path('title').validate(function (v) {
+Article.path('title').validate((v) => {
     return v.length > 5 && v.length < 70;
 });
 

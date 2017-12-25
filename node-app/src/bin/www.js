@@ -15,11 +15,13 @@ const loggers = require('loggers');
 const db = require('db');
 const app = require('app');
 
+const MODULE_NAME = path.basename(__filename);
+
 const port = +process.env.PORT || 8080;
 const hostname = process.env.HOST || '127.0.0.1';
-const handleError = error => loggers.error(`The ${error} was throws`);
+const handleError = error => loggers.error(MODULE_NAME, `The ${error} was throws`);
 const handleListen = () => {
-    loggers.log(`Server running at http://${hostname}:${port}/`)
+    loggers.log(MODULE_NAME, `Server running at http://${hostname}:${port}/`);
 };
 
 db.init()

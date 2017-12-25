@@ -1,12 +1,21 @@
 const { empty } = require('helpers');
 const { dbg_colors } = require('constants/global.constants');
-const log = require('debug')('app:: log::');
-const warn = require('debug')('app:: warn::');
-const error = require('debug')('app:: error::');
+const appLog = require('debug')('app:: log::');
+const appWarn = require('debug')('app:: warn::');
+const appError = require('debug')('app:: error::');
 
-log.color = dbg_colors.LOG;
-warn.color = dbg_colors.WARN;
-error.color = dbg_colors.ERROR;
+appLog.color = dbg_colors.LOG;
+appWarn.color = dbg_colors.WARN;
+appError.color = dbg_colors.ERROR;
+
+const makeLogger = logger => (moduleName, message) => {
+    const logMsg = moduleName ? `${moduleName} -> ${message}` : message;
+    return logger(logMsg);
+};
+
+const log = makeLogger(appLog);
+const warn = makeLogger(appWarn);
+const error = makeLogger(appError);
 
 const level = process.env.LOG_LEVEL || 3;
 
