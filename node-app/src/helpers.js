@@ -13,9 +13,12 @@ const hash256 = (text, secret) => {
     .digest('hex');
 };
 
+const stringifyCode = code => `${code.code} - ${code.str}`;
+
 module.exports = {
     empty,
     hash,
     hash256,
+    stringifyCode,
 };
 

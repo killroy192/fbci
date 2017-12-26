@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require('express-session')
+const session = require('express-session');
 // const serveFavicon = require('serve-favicon');
 const path = require('path');
 const loggers = require('loggers');
-const mainRouter = require('routers/main');
+const mainRouter = require('routers/main.routers.js');
 const { SECRET_KEY } = require('constants/global.constants');
 
 const MODULE_NAME = path.basename(__filename);
@@ -20,7 +20,7 @@ serverHandler
         secret: SECRET_KEY,
         resave: false,
         saveUninitialized: true,
-        cookie: { secure: true },
+        cookie: { secure: false },
     }))
     // .use(express.static(path.join(__dirname, '/web/dist/')))
     .use('/', mainRouter);

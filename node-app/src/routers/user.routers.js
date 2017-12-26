@@ -3,9 +3,10 @@ const path = require('path');
 const loggers = require('loggers');
 const {
     createUser,
-    getUserById,
     checkUser,
 } = require('services/user.services.js');
+const { stringifyCode } = require('helpers');
+const codes = require('constants/code.constants');
 
 
 const MODULE_NAME = path.basename(__filename);
@@ -15,32 +16,37 @@ const router = express.Router();
 router
     .post('/login', (req, res) => {
         if (req.session.user) {
-            return res.redirect('/registry');
+            return res.redirect('/');
         }
 
         return checkUser(req.body)
             .then((user) => {
                 if (user) {
-                    req.session.user = { id: user._id, name: user.name };
+                    req.session.user = { id: user._id, login: user.login };
                     res.redirect('/');
                 }
             })
-            .catch((error) => {
-                loggers.error(MODULE_NAME, error.massage);
+            .catch((e) => {
+                if (e.name && e.name !== codes.ERROR_TYPE) {
+                    loggers.error(MODULE_NAME, e.massage);
+                    return res.status(codes.INTERNAL_SERVER_ERROR.code).send(codes.INTERNAL_SERVER_ERROR.str);
+                }
+                return res.status(e.code).send(e.massages);
             });
     })
     .post('/registry', (req, res) => {
         createUser(req.body)
-            .then((result) => {
-                loggers.log(MODULE_NAME, 'User created');
+            .then((user) => {
+                req.session.user = { id: user._id, login: user.login };
+                loggers.log(MODULE_NAME, stringifyCode(codes.CREATED));
+                res.redirect('/');
             })
-            .catch((err) => {
-                if (err.toJSON().code === 11000) {
-                    loggers.log(MODULE_NAME, 'This email already exist');
-                    res.status(500).send('This email already exist');
-                } else {
-                    loggers.log(MODULE_NAME, 'somth. gone wrong');
+            .catch((e) => {
+                if (e.name && e.name !== codes.ERROR_TYPE) {
+                    loggers.error(MODULE_NAME, e.massage);
+                    return res.status(codes.INTERNAL_SERVER_ERROR.code).send(codes.INTERNAL_SERVER_ERROR.str);
                 }
+                return res.status(e.code).send(e.massages);
             });
     })
     .post('/logout', (req, res) => {

@@ -1200,6 +1200,10 @@ mongodb@2.2.33:
     mongodb-core "2.1.17"
     readable-stream "2.2.7"
 
+mongoose-error-helper@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/mongoose-error-helper/-/mongoose-error-helper-0.0.2.tgz#016c25c64d4371495cc381d175d8ee8b22ca7227"
+
 mongoose@^4.13.7:
   version "4.13.7"
   resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.13.7.tgz#f760c770e6c8cdf34a6fe8b7443882b5fced1032"
@@ -1802,6 +1806,10 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
+
+validator@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-9.2.0.tgz#ad216eed5f37cac31a6fe00ceab1f6b88bded03e"
 
 validator@~8.2.0:
   version "8.2.0"
